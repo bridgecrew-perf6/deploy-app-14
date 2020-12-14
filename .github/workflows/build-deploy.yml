@@ -17,4 +17,11 @@ jobs:
     steps:
       - name: Test that this works
         run: echo "hello again"
+  a_third_job:
+    name: A third job
+    runs-on: ubuntu-latest
+    needs: another_job
+    steps:
+      - name: Test that this works
+        run: echo "hello again"
 
