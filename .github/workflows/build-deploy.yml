@@ -11,3 +11,10 @@ jobs:
     steps:
       - name: Test that this works
         run: echo "hello"
+  another_job:
+    name: Another job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test that this works
+        run: echo "hello again"
+
