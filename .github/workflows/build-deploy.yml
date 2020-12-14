@@ -1,0 +1,10 @@
+name: Build and Deploy to GH Pages
+
+on:
+  push:
+    branch: master
+
+jobs:
+  build_deploy:
+    - name: Test that this works
+      run: echo "hello"
