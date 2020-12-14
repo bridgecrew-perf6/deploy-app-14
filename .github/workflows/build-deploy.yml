@@ -6,5 +6,8 @@ on:
 
 jobs:
   build_deploy:
-    - name: Test that this works
-      run: echo "hello"
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test that this works
+        run: echo "hello"
