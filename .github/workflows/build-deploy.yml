@@ -9,8 +9,17 @@ jobs:
     name: Build and Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Test that this works
-        run: echo "hello"
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build
+        run: yarn build
+
+      - name: Deploy to GH Pages
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: build
   another_job:
     name: Another job
     runs-on: ubuntu-latest
